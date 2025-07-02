@@ -1,37 +1,9 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #1a1a1a;
-}
-
-header {
-  background-color: #2e5c30;
-  padding-bottom: 10px;
-}
-
-.logo-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 10px 20px;
-}
-
-.logo {
-  height: 60px;
-}
-
-nav a {
+  background: url('images/lawn-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 .top-banner {
@@ -48,11 +20,52 @@ nav a:hover {
   text-decoration: none;
 }
 
+header {
+  background-color: rgba(46, 92, 48, 0.9);
+  padding-bottom: 10px;
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.center-logo {
+  display: block;
+  margin: 10px auto;
+  height: 80px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.ig-icon {
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
 .business-name {
   text-align: center;
   color: #ffffff;
   font-size: 22px;
-  background-color: #2e5c30;
+  background-color: rgba(46, 92, 48, 0.9);
   padding: 10px 0;
 }
 
@@ -61,86 +74,66 @@ main {
   text-align: center;
 }
 
-.hero {
-  background-color: #f8f8f8;
+/* Reusable section box style */
+.hero, .services, .service-areas, .gallery {
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 25px;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-.logo-hero {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.logo-hero img {
-  height: 100px;
-  max-width: 90%;
-}
-
-.hero h2 {
-  font-size: 24px;
-  color: #2e5c30;
-  margin-bottom: 10px;
+.hero h2, .services h2, .service-areas h2 {
+  color: #ffffff;
+  font-size: 26px;
+  text-shadow: 1px 1px 3px black;
 }
 
 .hero p {
   font-size: 16px;
-  color: #333;
+  color: #eeeeee;
   line-height: 1.6;
+  text-shadow: 1px 1px 2px #000;
 }
 
-.services {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.services h2 {
-  font-size: 22px;
-  color: #2e5c30;
-  margin-bottom: 20px;
-}
-
-.services-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.services-list {
+.services-list, .service-areas-list {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
   text-align: left;
 }
 
-.services-list li {
-  font-size: 16px;
-  margin-bottom: 12px;
-  color: #333;
+.services-list li,
+.service-areas-list li {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .services-list i {
-  color: green;
+  color: #ff5252;
+  margin-right: 8px;
+}
+
+.service-areas-list li::before {
+  content: "📍";
   margin-right: 8px;
 }
 
 .estimate-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: red;
+  background-color: #ff3c3c;
   color: white;
   font-size: 18px;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;
 }
 
 .estimate-button:hover {
@@ -158,61 +151,54 @@ main {
   100% { transform: scale(1); }
 }
 
-.gallery {
-  padding: 40px 20px;
-  background-color: #f8f8f8;
-  text-align: center;
-}
-
+/* Gallery Styles */
 .gallery-set {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
 .photo-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 5px;
   border-radius: 6px;
   position: relative;
-  max-width: 250px;
-  cursor: pointer;
+  width: 280px;
+  box-sizing: border-box;
 }
 
 .photo-box img {
   width: 100%;
   height: auto;
   border-radius: 6px;
+  cursor: pointer;
   display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 
 .label {
   position: absolute;
   bottom: 8px;
   left: 8px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 4px 10px;
+  padding: 4px 8px;
   font-size: 14px;
-  font-weight: bold;
   border-radius: 4px;
 }
 
 footer {
-  background-color: #2e5c30;
+  background-color: rgba(46, 92, 48, 0.9);
   color: white;
   text-align: center;
   padding: 15px;
   margin-top: 50px;
 }
 
-.insta-link i {
-  font-size: 20px;
-}
-
-/* Lightbox */
+/* Lightbox (if enabled later) */
 .lightbox {
   display: none;
   position: fixed;
@@ -236,33 +222,23 @@ footer {
   display: block;
 }
 
-/* 🔄 Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .logo-nav {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
   }
 
-  .services-wrapper,
   .gallery-set {
     flex-direction: column;
     align-items: center;
   }
 
-  .hero,
-  .services {
-    padding: 15px;
-  }
-
   .photo-box {
-    max-width: 90%;
+    width: 90%;
   }
 
-  nav a {
-    margin: 10px 0;
-  }
-
-  .logo-hero img {
-    height: 80px;
+  .center-logo {
+    height: 60px;
   }
 }
