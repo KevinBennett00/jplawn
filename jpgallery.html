@@ -2,116 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photos - JP's Total Lawn Care and Services</title>
   <link rel="stylesheet" href="jpstyles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="images/jp-lawn.png" />
 </head>
 <body>
+  <div class="top-banner">
+    <a href="sms:+16788504294" class="sms-link"> Free Estimate: (678) 850-4294</a>
+  </div>
+
   <header>
     <div class="logo-nav">
-      <img src="images/jplawn.png" alt="JP's Logo" class="logo" />
+      <img src="images/jp-lawn.png" alt="JP Logo" class="logo" />
       <nav>
         <a href="jpindex.html">Home</a>
         <a href="jpgallery.html">Photos</a>
-        <a href="https://instagram.com" target="_blank" class="insta-link">
-          <i class="fab fa-instagram"></i>
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram-icon.png" alt="Instagram" class="ig-icon" />
         </a>
       </nav>
     </div>
-    <div class="top-banner">
-      <a href="sms:6788504294?body=Hi,%20I'm%20interested%20in%20a%20free%20estimate%20for%20lawn%20care!" class="sms-link">
-        Free Estimate (678) 850-4294
-      </a>
-    </div>
-    <div class="business-name">
-      <h1>JP's Total Lawn Care and Services</h1>
-    </div>
+    <h1 class="business-name">Our Work</h1>
   </header>
 
   <main class="gallery">
-    <!-- Set 1 -->
+    <!-- Before/After Sets -->
     <div class="gallery-set">
       <div class="photo-box">
-        <img src="images/jp-ba1.jpg" alt="Before 1">
+        <img src="images/cropped_image_1.jpg" alt="Before">
         <div class="label">Before</div>
       </div>
       <div class="photo-box">
-        <img src="images/jp-ba2.jpg" alt="After 1">
+        <img src="images/cropped_image_2.jpg" alt="After">
         <div class="label">After</div>
       </div>
     </div>
 
-    <!-- Set 2 -->
     <div class="gallery-set">
-      <div class="photo-box">
-        <img src="images/jp-ba3.jpg" alt="Before 2">
-        <div class="label">Before</div>
-      </div>
-      <div class="photo-box">
-        <img src="images/jp-ba4.jpg" alt="After 2">
-        <div class="label">After</div>
-      </div>
+      <div class="photo-box"><img src="images/jp-ba1.jpg"><div class="label">Before</div></div>
+      <div class="photo-box"><img src="images/jp-ba2.jpg"><div class="label">After</div></div>
+    </div>
+    <div class="gallery-set">
+      <div class="photo-box"><img src="images/jp-ba3.jpg"><div class="label">Before</div></div>
+      <div class="photo-box"><img src="images/cropped_image_3.jpg"><div class="label">After</div></div>
+    </div>
+    <div class="gallery-set">
+      <div class="photo-box"><img src="images/jp-ba5.jpg"><div class="label">Before</div></div>
+      <div class="photo-box"><img src="images/jp-ba6.jpg"><div class="label">After</div></div>
+    </div>
+    <div class="gallery-set">
+      <div class="photo-box"><img src="images/jp-ba7.jpg"><div class="label">Before</div></div>
+      <div class="photo-box"><img src="images/jp-ba8.jpg"><div class="label">After</div></div>
     </div>
 
-    <!-- Set 3 -->
+    <!-- Last row of 3 photos: Before | No Label | After -->
     <div class="gallery-set">
-      <div class="photo-box">
-        <img src="images/jp-ba5.jpg" alt="Before 3">
-        <div class="label">Before</div>
-      </div>
-      <div class="photo-box">
-        <img src="images/jp-ba6.jpg" alt="After 3">
-        <div class="label">After</div>
-      </div>
-    </div>
-
-    <!-- Set 4 -->
-    <div class="gallery-set">
-      <div class="photo-box">
-        <img src="images/jp-ba7.jpg" alt="Before 4">
-        <div class="label">Before</div>
-      </div>
-      <div class="photo-box">
-        <img src="images/jp-ba8.jpg" alt="After 4">
-        <div class="label">After</div>
-      </div>
-    </div>
-
-    <!-- Set 5 - 3 photos -->
-    <div class="gallery-set">
-      <div class="photo-box">
-        <img src="images/jp-ba9.jpg" alt="Before 5">
-        <div class="label">Before</div>
-      </div>
-      <div class="photo-box">
-        <img src="images/jp-ba10.jpg" alt="Middle 5">
-      </div>
-      <div class="photo-box">
-        <img src="images/jp-ba11.jpg" alt="After 5">
-        <div class="label">After</div>
-      </div>
+      <div class="photo-box"><img src="images/jp-ba9.jpg"><div class="label">Before</div></div>
+      <div class="photo-box"><img src="images/jp-ba10.jpg"></div>
+      <div class="photo-box"><img src="images/jp-ba11.jpg"><div class="label">After</div></div>
     </div>
   </main>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-    <img id="lightbox-img" src="#" alt="Zoomed Image">
-  </div>
-
-  <script>
-    document.querySelectorAll('.photo-box img').forEach(img => {
-      img.addEventListener('click', () => {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'block';
-      });
-    });
-  </script>
-
   <footer>
-    <p>&copy; 2025 JP's Total Lawn Care & Services</p>
+    <p>&copy; 2025 JP's Total Lawn Care and Services</p>
   </footer>
 </body>
 </html>
