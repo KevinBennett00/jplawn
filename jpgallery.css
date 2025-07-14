@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('images/lawn-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.top-bar {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  max-width: 200px;
+  margin-bottom: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.insta-icon {
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 20px 15px;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.row.three {
+  gap: 25px;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.image-container img {
+  width: 280px;
+  height: auto;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  transform: scale(1.03);
+}
+
+.label {
+  margin-right: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+}
